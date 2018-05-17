@@ -1,0 +1,7 @@
+Exercise 2:
+2.a
+If a gene appears in several clusters, the script will only print the number of the first cluster.
+2.b
+Yes, cause it only searches based on the gene name. And in our genome, the forward and the reversed gene have different names.
+
+
