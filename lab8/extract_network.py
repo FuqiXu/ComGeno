@@ -9,8 +9,6 @@ taxaID3 = sys.argv[4]
 taxaID4 = sys.argv[5]
 taxaID5 = sys.argv[6]
 
-
-
 with gzip.open(allNetwork,'r') as f,open('geno1','w') as g1,open('geno2','w') as g2,open('geno3','w') as g3,open('geno4','w') as g4,open('geno5','w') as g5:
     for line in f:
         pair = line.decode('utf8')
