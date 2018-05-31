@@ -4,8 +4,6 @@ import math
 import numpy as np
 import matplotlib.pyplot as plt
 
-inFile = sys.argv[1]
-
 interNum = 0 
 with open(inFile,'r') as f:
     uniqueGenes = set()
@@ -46,8 +44,10 @@ with open(inFile,'r') as f:
         i = math.log10(i)
 
     # Plotting
-    fig = plt.scatter(nodes, allFreq,color='c')
-    plt.xlim(xmin=-5)
+    fig = plt.scatter(nodes, allFreq)
+    plt.xlim(0, 4000)  
+    plt.yscale('log')
+    #plt.xscale('log')
     # Mark the average connectivity
     plt.axvline(x=averConnect,color='k', linestyle='--',label='average connectivity')
     #plt.text(averConnect,30,label='average connectivity',rotation=90,color='k')

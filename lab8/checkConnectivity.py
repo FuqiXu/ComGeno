@@ -1,6 +1,5 @@
 import sys
 import re
-import math 
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -42,12 +41,12 @@ with open(inFile,'r') as f:
     for i in nodes:
         frequency = allInter.count(i) 
         allFreq.append(frequency)
-    for i in allFreq:
-        i = math.log10(i)
 
     # Plotting
     fig = plt.scatter(nodes, allFreq,color='c')
     plt.xlim(xmin=-5)
+    plt.yscale('log')
+    plt.xscale('log')
     # Mark the average connectivity
     plt.axvline(x=averConnect,color='k', linestyle='--',label='average connectivity')
     #plt.text(averConnect,30,label='average connectivity',rotation=90,color='k')
